@@ -1,8 +1,6 @@
 # Para crear el grafico que permite ver las dependencias
 
-Primero se debe instalar https://graphviz.org/
-
-Luego se debe ejecutar el siguiente comando
+Se debe ejecutar el siguiente comando:
 
 ```bash
 mvn com.github.ferstl:depgraph-maven-plugin:aggregate -DcreateImage=true -DreduceEdges=false -Dscope=compile "-Dincludes=com.food.ordering.system*:*"
