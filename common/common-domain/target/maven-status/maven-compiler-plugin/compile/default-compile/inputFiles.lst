@@ -1,0 +1,10 @@
+D:\desarrollo\workspaces\ws-java\cleanArchitecture\food-ordering-system\common\common-domain\src\main\java\com\food\ordering\system\domain\valueobject\ProductId.java
+D:\desarrollo\workspaces\ws-java\cleanArchitecture\food-ordering-system\common\common-domain\src\main\java\com\food\ordering\system\domain\entity\BaseEntity.java
+D:\desarrollo\workspaces\ws-java\cleanArchitecture\food-ordering-system\common\common-domain\src\main\java\com\food\ordering\system\domain\valueobject\CustomerId.java
+D:\desarrollo\workspaces\ws-java\cleanArchitecture\food-ordering-system\common\common-domain\src\main\java\com\food\ordering\system\domain\event\DomainEvent.java
+D:\desarrollo\workspaces\ws-java\cleanArchitecture\food-ordering-system\common\common-domain\src\main\java\com\food\ordering\system\domain\valueobject\RestaurantId.java
+D:\desarrollo\workspaces\ws-java\cleanArchitecture\food-ordering-system\common\common-domain\src\main\java\com\food\ordering\system\domain\entity\AgregateRoot.java
+D:\desarrollo\workspaces\ws-java\cleanArchitecture\food-ordering-system\common\common-domain\src\main\java\com\food\ordering\system\domain\valueobject\OrderId.java
+D:\desarrollo\workspaces\ws-java\cleanArchitecture\food-ordering-system\common\common-domain\src\main\java\com\food\ordering\system\domain\valueobject\Money.java
+D:\desarrollo\workspaces\ws-java\cleanArchitecture\food-ordering-system\common\common-domain\src\main\java\com\food\ordering\system\domain\valueobject\BaseId.java
+D:\desarrollo\workspaces\ws-java\cleanArchitecture\food-ordering-system\common\common-domain\src\main\java\com\food\ordering\system\domain\valueobject\OrderStatus.java
