@@ -5,8 +5,7 @@ Primero se debe instalar https://graphviz.org/
 Luego se debe ejecutar el siguiente comando
 
 ```bash
-mvn com.github.ferstl:depgraph-maven-plugin:aggregate -DcreateImage=true -DreduceEdges=false -Dscope=compile "-Dincludes=com.food
-.ordering.system*:*"
+mvn com.github.ferstl:depgraph-maven-plugin:aggregate -DcreateImage=true -DreduceEdges=false -Dscope=compile "-Dincludes=com.food.ordering.system*:*"
 ```
 
 Como resultado se verá la siguiente imagen
