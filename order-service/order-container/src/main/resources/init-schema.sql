@@ -126,3 +126,4 @@ CREATE TABLE "order".customers
     last_name character varying COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT customers_pkey PRIMARY KEY (id)
 );
+

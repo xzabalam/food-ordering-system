@@ -1,0 +1,54 @@
+server:
+  port: 8184
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+logging:
+  level:
+    com:
+      food:
+        ordering:
+          system: info
+    org:
+      springframework: info
+    net:
+      ttddyy:
+        dsproxy:
+          listener: debug
+    root: info
+  pattern:
+    console: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){blue} %clr(%-5level){magenta} %clr([%thread]){magenta} %clr(%logger{36}){blue} - %clr(%msg%n%throwable){white}'
+    file: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){blue} %clr(%-5level){magenta} %clr([%thread]){magenta} %clr(%logger{36}){blue} - %clr(%msg%n%throwable){white}%n'
+
+spring:
+  output:
+    ansi:
+      enabled: always
+  jpa:
+    open-in-view: false
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=customer&binaryTransfer=true&reWriteBatchedInsert=true&stringtype=unspecified
+    username: postgres
+    password: C@rp3D13m
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
+      schema-locations: classpath:init-schema.sql
+      data-locations: classpath:init-data.sql
+      mode: always
+  hikari:
+    minimumIdle: 10
+    maximumPoolSize: 50
+    idleTimeout: 30000
+    maxLifetime: 1800000
+    connectionTimeout: 30000

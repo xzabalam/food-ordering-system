@@ -3,7 +3,26 @@ server:
 
 logging:
   level:
-    com.food.ordering.system: DEBUG
+    com:
+      food:
+        ordering:
+          system: info
+    org:
+      springframework: info
+    net:
+      ttddyy:
+        dsproxy:
+          listener: debug
+    root: info
+  pattern:
+    console: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){blue} %clr(%-5level){magenta} %clr([%thread]){magenta} %clr(%logger{36}){blue} - %clr(%msg%n%throwable){white}'
+    file: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){blue} %clr(%-5level){magenta} %clr([%thread]){magenta} %clr(%logger{36}){blue} - %clr(%msg%n%throwable){white}%n'
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 order-service:
   payment-request-topic-name: payment-request
@@ -13,6 +32,31 @@ order-service:
   customer-topic-name: customer
   outbox-scheduler-fixed-rate: 10000
   outbox-scheduler-initial-delay: 10000
+
+spring:
+  jpa:
+    open-in-view: false
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=order&binaryTransfer=true&reWriteBatchedInsert=true&stringtype=unspecified
+    username: postgres
+    password: C@rp3D13m
+    driver-class-name: org.postgresql.Driver
+  sql:
+    init:
+      platform: postgres
+      mode: always
+      schema-locations: classpath:init-schema.sql
+  hikari:
+    minimumIdle: 10
+    maximumPoolSize: 50
+    idleTimeout: 30000
+    maxLifetime: 1800000
+    connectionTimeout: 30000
 
 kafka-config:
   bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
